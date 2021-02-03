@@ -71,18 +71,20 @@ class MessageController {
     }
 
     const formattedData = []
-
+    moment.locale('pt-br')
     for (const item of messages) {
       formattedData.push({
         id: item.id,
         text: item.text,
-        hour: moment(item.createdAt).format('hh:ss'),
+        hour: moment(item.createdAt).format('hh:mm'),
         user: item.user.name,
         userId: item.user.id
       })
     }
 
     formattedData.sort(compare)
+
+    return res.status(200).json(formattedData)
   }
 }
 

@@ -13,5 +13,6 @@ routes.get('/user/:email', UserController.getUser)
 routes.get('/users', UserController.getAllUsers)
 
 routes.post('/message', MessageController.sendMessage)
+routes.get('/message/:userId/:myId', MessageController.listAllMessages)
 
 module.exports = routes
