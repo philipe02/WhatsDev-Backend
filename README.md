@@ -15,4 +15,5 @@ yarn start
 ### References
 
 [Sequelize Doc](https://sequelize.org/master/).
+
 [Socket.io Doc](https://socket.io/docs/v3).
